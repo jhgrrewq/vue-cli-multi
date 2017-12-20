@@ -3,7 +3,7 @@ const path = require('path')
 const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const packageConfig = require('../package.json')
-var glob = require('glob');
+const glob = require('glob');
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -114,12 +114,8 @@ exports.getMultiEntry = function (globPath) {
     if( tmp[0] == 'src' ){
       pathsrc = tmp[1];
     }
-    //console.log(pathsrc)
     pathname = pathsrc + '/' + basename; // 正确输出js和html的路径
     entries[pathname] = entry;
-
-    //console.log(pathname+'-----------'+entry);
-
   });
 
   return entries;

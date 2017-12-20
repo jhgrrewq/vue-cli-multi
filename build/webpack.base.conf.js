@@ -4,9 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-var glob = require('glob');
 var entries = utils.getMultiEntry('./src/module/**/*.js'); // 获得入口js文件
-// var chunks = Object.keys(entries);
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)

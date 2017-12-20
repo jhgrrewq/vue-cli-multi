@@ -55,7 +55,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
 
 var pages = utils.getMultiEntry('./src/module/**/*.html');
-
 for (var pathname in pages) {
   // 配置生成的html文件，定义路径等
   var conf = {
